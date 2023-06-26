@@ -12,7 +12,7 @@ All these widgets can be changed via right click on widget and choosing one, or 
 - [x] Shows status of battery
 - [x] Shows lifetime of battery (Custom)
 - [x] Shows if computer is plugged or not
-- [ ] Changes color on specific percentage of battery
+- [x] Changes color on specific percentage of battery
 
 ### Custom Compact
 
