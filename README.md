@@ -18,7 +18,7 @@ All these widgets can be changed via right click on widget and choosing one, or 
 
 - [x] Shows status of battery
 - [x] Shows time and date
-- [ ] Shows avatar of user (Little decoration to it 😁)
+- [x] Shows avatar of user (Little decoration to it 😁)
 
 ### Music
 
@@ -30,6 +30,6 @@ All these widgets can be changed via right click on widget and choosing one, or 
 - [x] Shows duration of song
 - [x] Shows elapsed time
 - [x] Can play next or previous song in playlist
-- [ ] Shows Little Visualizer
+- [x] Shows Little Visualizer
 - [ ] Can toggle if shuffle playlist or not (Custom)
 - [ ] Can toggle if repeat song or playlist or nothing (Custom)
