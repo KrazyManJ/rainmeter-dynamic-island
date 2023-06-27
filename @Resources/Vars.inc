@@ -27,5 +27,5 @@
 ;
 [F_ByteTransition]
     Measure=Calc
-    Formula=([Transition]/100*255)
+    Formula=[&Script:Map([&Transition],0,100,0,255)]
     DynamicVariables=1

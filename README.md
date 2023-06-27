@@ -1,9 +1,9 @@
-# Rainmeter Dynamic Island
+<h1 align=center>Rainmeter Dynamic Island</h1>
 
 Widget for software called Rainmeter to represent the same functionality as Dynamic Island
 on iPhone 14 where was original idea of this concept.
 
-## Widget types
+## 🪟 Widget types
 
 All these widgets can be changed via right click on widget and choosing one, or by scrolling down or up with your mouse.
 
@@ -33,3 +33,9 @@ All these widgets can be changed via right click on widget and choosing one, or 
 - [x] Shows Little Visualizer
 - [ ] Can toggle if shuffle playlist or not (Custom)
 - [ ] Can toggle if repeat song or playlist or nothing (Custom)
+
+## ❔ FAQ / FPAQ (Future Possible Asked Questions)
+
+> Why this skin does not include Lens (Eye)?
+
+It does not look good and also i want to make this skin minimalistic as Apple that tries to make minimalistic interface of their operating system!

@@ -1,11 +1,10 @@
 [Rainmeter]
-    @Include=#@#Vars.ini
+    @Include=#@#Vars.inc
     Update=1
     DynamicVariables=1
     SkinWidth=(#C_SKIN_WIDTH#+#C_SKIN_MARGIN#*2)
     SkinHeight=(#C_SKIN_HEIGHT#+#C_SKIN_MARGIN#*2)
     ; OnRefreshAction=[!UnpauseMeasure Transition] ;Open on start (Debug)
-
 ;
 ; ======================================================================================
 ;   CONTEXT MENU
@@ -30,20 +29,19 @@
 ;   TRANSITION
 ; ======================================================================================
 ;
-[FadeInvertor]
-    Measure=Calc
-    IfCondition=Transition = 100
-    IfTrueAction=[!SetOption Transition InvertMeasure 1][!PauseMeasure Transition][!ShowMeterGroup Big]
-    IfCondition2=Transition = 0
-    IfTrueAction2=[!SetOption Transition InvertMeasure 0][!PauseMeasure Transition][!HideMeterGroup Big]
-
-[Transition]
-    Measure=Loop
-    StartValue=0
-    EndValue=100
-    Increment=15
-    LoopCount=1
-    Paused=1
+    [FadeInvertor]
+        Measure=Calc
+        IfCondition=Transition = 100
+        IfTrueAction=[!SetOption Transition InvertMeasure 1][!PauseMeasure Transition][!ShowMeterGroup Big]
+        IfCondition2=Transition = 0
+        IfTrueAction2=[!SetOption Transition InvertMeasure 0][!PauseMeasure Transition][!HideMeterGroup Big]
+    [Transition]
+        Measure=Loop
+        StartValue=0
+        EndValue=100
+        Increment=15
+        LoopCount=1
+        Paused=1
 ;
 ; ======================================================================================
 ;   ISLAND
@@ -61,3 +59,7 @@
         Meter=Shape
         Shape=Rectangle #V_CUR_X#,#V_CUR_Y#,#V_CUR_W#,#V_CUR_H#,#V_CUR_BORDER# | Fill Color 0,0,0,180 | StrokeWidth 0
         DynamicVariables=1
+    [Script]
+        Measure=Script
+        ScriptFile=#@#Script.lua
+        Disabled=1

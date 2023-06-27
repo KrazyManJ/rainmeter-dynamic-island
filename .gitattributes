@@ -1,2 +1,4 @@
 *.ini linguist-detectable
 *.ini -linguist-documentation
+*.inc linguist-detectable
+*.inc -linguist-documentation
