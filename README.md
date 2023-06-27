@@ -34,6 +34,12 @@ All these widgets can be changed via right click on widget and choosing one, or 
 - [ ] Can toggle if shuffle playlist or not (Custom)
 - [ ] Can toggle if repeat song or playlist or nothing (Custom)
 
+### Volume
+
+- [x] Shows audio volume
+- [x] Shows if audio is muted or not
+- [x] Allows to toggle mute state
+
 ## ❔ FAQ / FPAQ (Future Possible Asked Questions)
 
 > Why this skin does not include Lens (Eye)?

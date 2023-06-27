@@ -17,12 +17,14 @@
     ContextAction2=[!ActivateConfig #CURRENTCONFIG# "DI_Custom_Compact.ini"]
     ContextTitle3=Music
     ContextAction3=[!ActivateConfig #CURRENTCONFIG# "DI_Music.ini"]
-    ContextTitle4=----
-    ContextAction4=[]
-    ContextTitle5=Center
-    ContextAction5=[!Move (#PSCREENAREAWIDTH#/2-#C_SKIN_WIDTH#/2-#C_SKIN_MARGIN#) 0]
-    ContextTitle6=Rainmeter...
-    ContextAction6=[!SkinMenu]
+    ContextTitle4=Volume
+    ContextAction4=[!ActivateConfig #CURRENTCONFIG# "DI_Volume.ini"]
+    ContextTitle5=----
+    ContextAction5=[]
+    ContextTitle6=Center
+    ContextAction6=[!Move (#PSCREENAREAWIDTH#/2-#C_SKIN_WIDTH#/2-#C_SKIN_MARGIN#) 0]
+    ContextTitle7=Rainmeter...
+    ContextAction7=[!SkinMenu]
 
 ;
 ; ======================================================================================
