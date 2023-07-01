@@ -100,7 +100,7 @@
 
     [Island]
         Meter=Shape
-        Shape=Rectangle #V_CUR_X#,#V_CUR_Y#,#V_CUR_W#,#V_CUR_H#,#V_CUR_BORDER# | Fill Color 0,0,0,180 | StrokeWidth 0
+        Shape=Rectangle #V_CUR_X#,#V_CUR_Y#,#V_CUR_W#,#V_CUR_H#,#V_CUR_BORDER# | Fill Color 0,0,0 | StrokeWidth 0
         DynamicVariables=1
     [Script]
         Measure=Script
