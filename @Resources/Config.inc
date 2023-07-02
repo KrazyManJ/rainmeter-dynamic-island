@@ -1,3 +1,3 @@
 [Variables]
-    IslandStrokeWidth=1
+    IslandStrokeWidth=2
     IslandAlphaValue=255

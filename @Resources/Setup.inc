@@ -21,11 +21,11 @@
     ContextTitle5=----
     ContextAction5=[]
     ContextTitle6=Move To Center
-    ContextAction6=[!Move (#PSCREENAREAWIDTH#/2-#C_SKIN_WIDTH#/2-#C_SKIN_MARGIN#) 0]
+    ContextAction6=[!Move (#PSCREENAREAWIDTH#/2-#C_SKIN_WIDTH#/2-#C_SKIN_MARGIN#) 0][!Log "XD"]
     ContextTitle7=Toggle Opacity Mode
     ContextAction7=[!CommandMeasure "Script" "ToggleConfigValue('IslandAlphaValue',[#IslandAlphaValue],255,180)"]
     ContextTitle8=Toggle Island Stroke
-    ContextAction8=[!CommandMeasure "Script" "ToggleConfigValue('IslandStrokeWidth',[#IslandStrokeWidth],1,0)"]
+    ContextAction8=[!CommandMeasure "Script" "ToggleConfigValue('IslandStrokeWidth',[#IslandStrokeWidth],2,0)"]
     ContextTitle9=Rainmeter...
     ContextAction9=[!SkinMenu]
 ;
@@ -102,10 +102,15 @@
         MouseScrollUpAction=[!ActivateConfig #CURRENTCONFIG# #C_PREV_TYPE#]
         DynamicVariables=1
 
+    [IslandContainer]
+        Meter=Shape
+        Shape=Rectangle #V_CUR_X#,#V_CUR_Y#,#V_CUR_W#,#V_CUR_H#,#V_CUR_BORDER#
+        DynamicVariables=1
     [Island]
         Meter=Shape
         Shape=Rectangle #V_CUR_X#,#V_CUR_Y#,#V_CUR_W#,#V_CUR_H#,#V_CUR_BORDER# | Fill Color 0,0,0,#IslandAlphaValue# | StrokeWidth #IslandStrokeWidth# | Stroke Color 255,255,255,40
         DynamicVariables=1
+        Container=IslandContainer
     [Script]
         Measure=Script
         ScriptFile=#@#Script.lua
