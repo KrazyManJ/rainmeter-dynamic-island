@@ -1,5 +1,4 @@
 [Rainmeter]
-    @Include=#@#Vars.inc
     Update=1
     DynamicVariables=1
     SkinWidth=(#C_SKIN_WIDTH#+#C_SKIN_MARGIN#*2)
@@ -21,16 +20,21 @@
     ContextAction4=[!ActivateConfig #CURRENTCONFIG# "DI_Volume.ini"]
     ContextTitle5=----
     ContextAction5=[]
-    ContextTitle6=Center
+    ContextTitle6=Move To Center
     ContextAction6=[!Move (#PSCREENAREAWIDTH#/2-#C_SKIN_WIDTH#/2-#C_SKIN_MARGIN#) 0]
-    ContextTitle7=Rainmeter...
-    ContextAction7=[!SkinMenu]
+    ContextTitle7=Toggle Opacity Mode
+    ContextAction7=[!CommandMeasure "Script" "ToggleConfigValue('IslandAlphaValue',[#IslandAlphaValue],255,180)"]
+    ContextTitle8=Toggle Island Stroke
+    ContextAction8=[!CommandMeasure "Script" "ToggleConfigValue('IslandStrokeWidth',[#IslandStrokeWidth],1,0)"]
+    ContextTitle9=Rainmeter...
+    ContextAction9=[!SkinMenu]
 ;
 ; ======================================================================================
 ;   INITIALIZE VARIABLES
 ; ======================================================================================
 ;
 [Variables]
+    @Include=#@#Config.inc
     ; Change these values depending on size of largest widget
         C_SKIN_WIDTH=600
         C_SKIN_HEIGHT=250
@@ -47,8 +51,8 @@
     ; Other Variables / Constants
         FONTFACE=SF Pro Display
         C_HALF=(#C_SKIN_MARGIN#+#C_SKIN_WIDTH#/2)
-        V_CUR_W=(#C_CLOSED_W#+[Transition]*((#C_OPENED_W#-#C_CLOSED_W#)/100))
-        V_CUR_H=(#C_CLOSED_H#+[Transition]*((#C_OPENED_H#-#C_CLOSED_H#)/100))
+        V_CUR_W=[&Script:Map([&Transition],0,100,[#C_CLOSED_W],[#C_OPENED_W])]
+        V_CUR_H=[&Script:Map([&Transition],0,100,[#C_CLOSED_H],[#C_OPENED_H])]
         V_CUR_BORDER=(#C_CLOSED_H#/2+([Transition]/500*(#C_OPENED_H#-#C_CLOSED_H#)))
         V_CUR_X=(#C_SKIN_MARGIN#+(#C_SKIN_WIDTH#-#V_CUR_W#)/2)
         V_CUR_Y=#C_SKIN_MARGIN#
@@ -100,7 +104,7 @@
 
     [Island]
         Meter=Shape
-        Shape=Rectangle #V_CUR_X#,#V_CUR_Y#,#V_CUR_W#,#V_CUR_H#,#V_CUR_BORDER# | Fill Color 0,0,0 | StrokeWidth 0
+        Shape=Rectangle #V_CUR_X#,#V_CUR_Y#,#V_CUR_W#,#V_CUR_H#,#V_CUR_BORDER# | Fill Color 0,0,0,#IslandAlphaValue# | StrokeWidth #IslandStrokeWidth# | Stroke Color 255,255,255,40
         DynamicVariables=1
     [Script]
         Measure=Script
