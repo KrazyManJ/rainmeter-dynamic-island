@@ -16,18 +16,20 @@
     ContextAction2=[!ActivateConfig #CURRENTCONFIG# "DI_Custom_Compact.ini"]
     ContextTitle3=Music
     ContextAction3=[!ActivateConfig #CURRENTCONFIG# "DI_Music.ini"]
-    ContextTitle4=Volume
-    ContextAction4=[!ActivateConfig #CURRENTCONFIG# "DI_Volume.ini"]
-    ContextTitle5=----
-    ContextAction5=[]
-    ContextTitle6=Move To Center
-    ContextAction6=[!Move (#PSCREENAREAWIDTH#/2-#C_SKIN_WIDTH#/2-#C_SKIN_MARGIN#) 0][!Log "XD"]
-    ContextTitle7=Toggle Opacity Mode
-    ContextAction7=[!CommandMeasure "Script" "ToggleConfigValue('IslandAlphaValue',[#IslandAlphaValue],255,180)"]
-    ContextTitle8=Toggle Island Stroke
-    ContextAction8=[!CommandMeasure "Script" "ToggleConfigValue('IslandStrokeWidth',[#IslandStrokeWidth],2,0)"]
-    ContextTitle9=Rainmeter...
-    ContextAction9=[!SkinMenu]
+    ContextTitle4=Shutdown
+    ContextAction4=[!ActivateConfig #CURRENTCONFIG# "DI_Shutdown.ini"]
+    ContextTitle5=Volume
+    ContextAction5=[!ActivateConfig #CURRENTCONFIG# "DI_Volume.ini"]
+    ContextTitle6=----
+    ContextAction6=[]
+    ContextTitle7=Move To Center
+    ContextAction7=[!Move (#PSCREENAREAWIDTH#/2-#C_SKIN_WIDTH#/2-#C_SKIN_MARGIN#) 0]
+    ContextTitle8=Toggle Opacity Mode
+    ContextAction8=[!CommandMeasure "Script" "ToggleConfigValue('IslandAlphaValue',[#IslandAlphaValue],255,180)"]
+    ContextTitle9=Toggle Island Stroke
+    ContextAction9=[!CommandMeasure "Script" "ToggleConfigValue('IslandStrokeWidth',[#IslandStrokeWidth],2,0)"]
+    ContextTitle10=Rainmeter...
+    ContextAction10=[!SkinMenu]
 ;
 ; ======================================================================================
 ;   INITIALIZE VARIABLES
@@ -96,8 +98,8 @@
 ;
     [ClickTriggerRegion]
         Meter=Shape
-        Shape=Rectangle #V_CUR_X#,#V_CUR_Y#,#V_CUR_W#,#C_CLOSED_H#,#V_CUR_BORDER# | Fill Color 0,0,0,0 | StrokeWidth 0
-        LeftMouseUpAction=[!CommandMeasure Transition "Reset"][!UnpauseMeasure Transition][!ToggleMeterGroup Big]
+        Shape=Rectangle (#V_CUR_X#+(#V_CUR_W#-#C_CLOSED_W#)/2),#V_CUR_Y#,#C_CLOSED_W#,#C_CLOSED_H#,#V_CUR_BORDER# | Fill Color 0,0,0,0 | StrokeWidth 0
+        LeftMouseUpAction=[!CommandMeasure Transition "Reset"][!UnpauseMeasure Transition][!ShowMeterGroup Big]
         MouseScrollDownAction=[!ActivateConfig #CURRENTCONFIG# #C_NEXT_TYPE#]
         MouseScrollUpAction=[!ActivateConfig #CURRENTCONFIG# #C_PREV_TYPE#]
         DynamicVariables=1
