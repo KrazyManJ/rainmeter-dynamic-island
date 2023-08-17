@@ -12,24 +12,22 @@
     RightMouseUpAction=[!SkinCustomMenu]
     ContextTitle=Battery
     ContextAction=[!ActivateConfig #CURRENTCONFIG# "DI_Battery.ini"]
-    ContextTitle2=Compact (Custom)
-    ContextAction2=[!ActivateConfig #CURRENTCONFIG# "DI_Custom_Compact.ini"]
-    ContextTitle3=Music
-    ContextAction3=[!ActivateConfig #CURRENTCONFIG# "DI_Music.ini"]
-    ContextTitle4=Shutdown
-    ContextAction4=[!ActivateConfig #CURRENTCONFIG# "DI_Shutdown.ini"]
-    ContextTitle5=Volume
-    ContextAction5=[!ActivateConfig #CURRENTCONFIG# "DI_Volume.ini"]
-    ContextTitle6=----
-    ContextAction6=[]
-    ContextTitle7=Move To Center
-    ContextAction7=[!Move (#PSCREENAREAWIDTH#/2-#C_SKIN_WIDTH#/2-#C_SKIN_MARGIN#) 0]
-    ContextTitle8=Toggle Opacity Mode
-    ContextAction8=[!CommandMeasure "Script" "ToggleConfigValue('IslandAlphaValue',[#IslandAlphaValue],255,180)"]
-    ContextTitle9=Toggle Island Stroke
-    ContextAction9=[!CommandMeasure "Script" "ToggleConfigValue('IslandStrokeWidth',[#IslandStrokeWidth],2,0)"]
-    ContextTitle10=Rainmeter...
-    ContextAction10=[!SkinMenu]
+     ContextTitle2=Music
+    ContextAction2=[!ActivateConfig #CURRENTCONFIG# "DI_Music.ini"]
+     ContextTitle3=Shutdown
+    ContextAction3=[!ActivateConfig #CURRENTCONFIG# "DI_Shutdown.ini"]
+     ContextTitle4=Volume
+    ContextAction4=[!ActivateConfig #CURRENTCONFIG# "DI_Volume.ini"]
+     ContextTitle5=----
+    ContextAction5=[]
+     ContextTitle6=Move To Center
+    ContextAction6=[!Move (#PSCREENAREAWIDTH#/2-#C_SKIN_WIDTH#/2-#C_SKIN_MARGIN#) 0]
+     ContextTitle7=Toggle Opacity Mode
+    ContextAction7=[!CommandMeasure "Script" "ToggleConfigValue('IslandAlphaValue',[#IslandAlphaValue],255,180)"]
+     ContextTitle8=Toggle Island Stroke
+    ContextAction8=[!CommandMeasure "Script" "ToggleConfigValue('IslandStrokeWidth',[#IslandStrokeWidth],2,0)"]
+     ContextTitle9=Rainmeter...
+    ContextAction9=[!SkinMenu]
 ;
 ; ======================================================================================
 ;   INITIALIZE VARIABLES
